@@ -3,7 +3,7 @@ import jwt, { decode } from "jsonwebtoken"
 
 export const protectRoute = async (req, res, next) =>{
     try {
-        //we have added a middle ware at the server.js that is app.use(cookieParser) for specificely below code.
+        //we have added a middleware at the server.js that is app.use(cookieParser) for specificely below code.
         const token = req.cookies.jwt;
 
         if(!token){
